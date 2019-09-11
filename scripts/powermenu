@@ -2,9 +2,10 @@
 
 ## Created By Aditya Shakya
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 1 -yoffset 30 -xoffset -5 -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 4 -font "Ubuntu Mono derivative Powerline 15" <<< "Lock|Logout|Reboot|Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 1 -yoffset 30 -xoffset -5 -width 12 -hide-scrollbar -line-padding 5 -padding 20 -lines 5 -font "Ubuntu Mono derivative Powerline 15" <<< "Lock|Sleep|Logout|Reboot|Shutdown")"
             case "$MENU" in
                 *Lock) i3lock-fancy ;;
+                *Sleep) i3lock-fancy && systemctl hibernate ;;
                 *Logout) openbox --exit;;
                 *Reboot) systemctl reboot ;;
                 *Shutdown) systemctl -i poweroff
