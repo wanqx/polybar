@@ -2,4 +2,4 @@
 
 ## Created By Aditya Shakya
 
-rofi -modi window -show window -hide-scrollbar -font "Ubuntu Mono derivative Powerline 15" -padding 20 -line-padding 4 -width 40 -lines 6
+rofi -modi window -show window -location 1 -yoffset 30 -xoffset -5 -hide-scrollbar -font "Ubuntu Mono derivative Powerline 15" -padding 20 -line-padding 4 -width 40 -lines 6
